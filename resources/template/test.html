@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>测试</title>
+    <meta charset="utf-8">
+    <style>
+        .test {
+            color: green;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        table {
+            border: 1px solid #e8e8e8;
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #e8e8e8;
+            padding: 5px;
+        }
+
+        table th {
+            background-color: #888;
+        }
+
+        .img-box {
+            border: 1px;
+            margin: 5px;
+        }
+
+        .img-box img {
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test">
+        <%= title %>
+    </div>
+    <div class="img-box">
+        <img src="https://img2.baidu.com/it/u=1070003001,653753576&fm=26&fmt=auto&gp=0.jpg" width="350" height="200" />
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(function(user){ %>
+                    <tr>
+                        <td>
+                            <%=user.id %>
+                        </td>
+                        <td>
+                            <%=user.name %>
+                        </td>
+                        <td>
+                            <%=user.age %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
